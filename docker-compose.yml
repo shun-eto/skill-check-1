@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  rust:
+    build: .
+    volumes:
+      - .:/usr/src/skill-check
+    ports:
+      - "8080:8080"
+    command: cargo watch -x run
